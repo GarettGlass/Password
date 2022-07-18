@@ -2,6 +2,7 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 /*
 Генератор паролей
 1) 8 символов.
@@ -25,11 +26,6 @@ public class Password {
         }
     }
 
-    public static void main(String[] args) {
-        ByteArrayOutputStream password = getPassword();
-        System.out.println(password.toString());
-    }
-
     public static ByteArrayOutputStream getPassword() {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         Collections.shuffle(list);
@@ -40,8 +36,8 @@ public class Password {
         forOut.add(list2.get(2));
         forOut.add(list1.get(3));
         int lengthPassword = 5;
-        while(lengthPassword>0){
-            int i =1 + (int) (Math.random() * 3);
+        while (lengthPassword > 0) {
+            int i = 1 + (int) (Math.random() * 3);
             switch (i) {
                 case 1:
                     forOut.add(list.get((int) (Math.random() * 25)));
